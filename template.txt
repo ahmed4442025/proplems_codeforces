@@ -1,0 +1,28 @@
+
+import os
+
+__location__ = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__)))
+
+
+def test():
+    o = open(os.path.join(__location__, 'data.txt'), encoding="UTF-8")
+    data = o.readlines()
+    for line in data:
+        line = line.replace("\n", '')
+        print(line)
+
+
+# ==================================================
+
+
+def code():
+    print('-- code --')
+
+
+def main():
+    # n, k = map(int, input().split())
+    code()
+
+
+main()
